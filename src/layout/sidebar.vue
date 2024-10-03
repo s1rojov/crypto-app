@@ -1,15 +1,18 @@
 <template>
-    <v-navigation-drawer app permanent>
-        <v-list-item title="Test Application" class="mt-5 text-center"></v-list-item>
-        <hr>
-        <div class="mt-5">
-            <v-list-item link title="List Item 1"></v-list-item>
-            <v-list-item link title="List Item 1"></v-list-item>
-            <v-list-item link title="List Item 1"></v-list-item>
+    <div class="border-r h-screen">
+        <p class="my-3 text-lg font-medium text-center">Test Application</p>
+        <div class="">
+            <v-list-item v-for="item in sidebarItems" :key="item.name" :title="item.name" :to="item.path" link
+                class="gap-3">
+                <template v-slot:prepend>
+                    <BaseIcon :name="item.icon" class="w-6 h-6 text-blue-900" />
+                </template>
+            </v-list-item>
         </div>
-
-    </v-navigation-drawer>
+    </div>
 </template>
-<script setup lang="ts">
 
+<script setup lang="ts">
+import { useLayoutFn } from '@/layout/composable';
+const { sidebarItems } = useLayoutFn();
 </script>

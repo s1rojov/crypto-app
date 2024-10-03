@@ -1,13 +1,12 @@
 <template>
-    <v-app-bar app color="primary" dark>
-        <v-toolbar-title>Hello admin</v-toolbar-title>
+    <div class="d-flex bg-primary py-2 px-5">
+        <v-toolbar-title class="text-white">Hello admin</v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-btn outlined rounded class="flex justify-center" color="white" @click="logout">
+        <v-btn outlined class="flex justify-center" color="primary" @click="logout">
             <BaseIcon name="logout" class="w-5 h-5 mr-2 text-white" />
             Logout
         </v-btn>
-
-    </v-app-bar>
+    </div>
 
 </template>
 <script setup lang="ts">

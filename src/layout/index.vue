@@ -1,23 +1,20 @@
 <template>
     <v-app>
-        <v-main>
-            <v-container fluid>
-                <v-row>
-                    <v-col cols="3" class="pa-0">
-                        <SidebarComponent />
-                    </v-col>
-                    <v-col cols="9">
-                        <HeaderComponent />
-                        <ContentComponent />
-                    </v-col>
-                </v-row>
-            </v-container>
-        </v-main>
+        <div class="d-flex">
+            <div class="w-1/5">
+                <SidebarComponent />
+            </div>
+            <div class="w-4/5 h-screen">
+                <HeaderComponent />
+                <div class="px-5 py-2">
+                    <router-view></router-view>
+                </div>
+            </div>
+        </div>
     </v-app>
 </template>
 
 <script setup lang="ts">
 import HeaderComponent from '@/layout/header.vue';
 import SidebarComponent from '@/layout/sidebar.vue';
-import ContentComponent from '@/layout/content.vue';
 </script>
