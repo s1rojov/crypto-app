@@ -1,5 +1,10 @@
 export const routers = [
     {
+        path: '/login',
+        name: 'Login',
+        component:()=>import('@/views/auth/index.vue')
+      },
+    {
         path: '/',
         name: 'Main layout',
         component:()=> import('@/layout/index.vue'),

@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <div class="d-flex">
+        <div class="d-flex h-screen overflow-hidden">
             <div class="w-1/5">
                 <SidebarComponent />
             </div>

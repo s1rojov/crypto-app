@@ -10,8 +10,13 @@
 
 </template>
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+
+
+const router = useRouter()
 function logout() {
     // Logout funksiyasini bu yerda qo'llashingiz mumkin
-    console.log('Logout clicked');
+    // console.log('Logout clicked');
+    router.push('/login')
 }
 </script>
