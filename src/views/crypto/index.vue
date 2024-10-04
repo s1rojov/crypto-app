@@ -7,10 +7,10 @@ const { readUploadedExcelData, excelData } = useCryptoFn()
 <template>
     <div class="d-flex items-center gap-5">
         <FileUploader @upload="readUploadedExcelData" />
-        <!-- {{ excelData }} -->
+        {{ excelData }}
 
-        <p v-for="item, index in excelData" :key="index">
+        <!-- <p v-for="item, index in excelData" :key="index">
             {{ item }}
-        </p>
+        </p> -->
     </div>
 </template>
