@@ -13,9 +13,10 @@ export function useCryptoFn() {
             const sheetName = workbook.SheetNames[0];
             const worksheet = workbook.Sheets[sheetName];
             excelData.value = XLSX.utils.sheet_to_json(worksheet);
+            console.log(excelData.value[0].Joizmi)
         };
-        file.value = file
         reader.readAsBinaryString(file);
+        file.value = file
     }
     return {
         readUploadedExcelData,
