@@ -1,5 +1,6 @@
 import * as XLSX from 'xlsx';
 import { ref } from 'vue'
+import Api from '@/service/api';
 export function useCryptoFn() {
     const file = ref<any>(
         null
@@ -17,6 +18,12 @@ export function useCryptoFn() {
         };
         reader.readAsBinaryString(file);
         file.value = file
+    }
+
+    function sendAllCrypto(data: any) {
+        Api.post('crypto/upload', data).then(() => {
+
+        })
     }
     return {
         readUploadedExcelData,

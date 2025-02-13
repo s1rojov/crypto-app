@@ -10,24 +10,28 @@
         <div class="items-center gap-5">
             <div class="flex gap-3">
                 <FileUploader @upload="readUploadedExcelData" />
-            <v-btn color="success" v-if="excelData.length > 0">
-                Send File
-            </v-btn>
+                <v-btn color="success" v-if="excelData.length > 0">
+                    Send File
+                </v-btn>
             </div>
             <div class="mt-5">
                 <table class="w-full custom-table" v-if="excelData.length > 0">
-                    <tr>
-                        <th class="text-start">Nomi</th>
-                        <th class="text-start">Belgisi</th>
-                        <th class="text-start">Joizmi</th>
-                        <th colspan="6" class="text-start">Maqsadi</th>
-                    </tr>
-                    <tr v-for="item in excelData" :key="item.Nomi">
-                        <td>{{ item.Nomi }}</td>
-                        <td>{{ item.Belgisi }}</td>
-                        <td>{{ item.Joizmi }}</td>
-                        <td colspan="6">{{ item.Maqsadi }}</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th class="text-start">Nomi</th>
+                            <th class="text-start">Belgisi</th>
+                            <th class="text-start">Joizmi</th>
+                            <th colspan="6" class="text-start">Maqsadi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="item in excelData" :key="item.Nomi">
+                            <td>{{ item.Nomi }}</td>
+                            <td>{{ item.Belgisi }}</td>
+                            <td>{{ item.Joizmi }}</td>
+                            <td colspan="6">{{ item.Maqsadi }}</td>
+                        </tr>
+                    </tbody>
 
                 </table>
             </div>

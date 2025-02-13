@@ -35,8 +35,10 @@ const onSubmit = () => {
     if (!form.value) return
 
     loading.value = true
-    setTimeout(() => (loading.value = false), 2000)
-    router.push('/dashboard')
+    setTimeout(() => (loading.value = false), 1000)
+    if (password.value == '123' && email.value == "islom") {
+        router.push('/dashboard')
+    }
 }
 
 const required = (v: any) => {

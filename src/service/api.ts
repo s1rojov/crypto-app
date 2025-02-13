@@ -2,7 +2,7 @@ import axios, { type AxiosRequestConfig } from "axios";
 
 // Barcha so'rovlarga umumiy konfiguratsiyani o'rnatamiz
 const axiosInstance = axios.create({
-    baseURL: 'https://your-api-url.com', // Asosiy API URL (agar mavjud bo'lsa)
+    baseURL: 'http://localhost:3000/', // Asosiy API URL (agar mavjud bo'lsa)
     headers: {
         'Content-Type': 'application/json', // Default headers
     }
