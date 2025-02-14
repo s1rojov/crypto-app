@@ -28,7 +28,7 @@ const userId = ref<string | null>(null); // userId string bo'lishi kerak
 const MESSAGE = "Yopiq hamjamiyatimizga qoʻshilganingiz bilan tabriklaymiz 🎉🎉🎉";
 const BOT_TOKEN = "7810591719:AAEAU1iYrN_om1vzVKvUrdnqs4YzhRW7rxw";
 const BUTTON_TEXT = "Yopiq hamjamiyatimizga qo'shilish";
-const LINK = "https://t.me//+WhBA-dDHiB0xMDYy"; // Bu yerga kerakli link qo‘ying
+const LINK = "https://t.me/+zfQUgxh1BkRhYmVi"; // Bu yerga kerakli link qo‘ying
 const notifyText = ref<any>('')
 const notify = ref<boolean>(false)
 async function onSubmit() {
